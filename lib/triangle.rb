@@ -20,16 +20,9 @@ class Triangle
   end
 
   def validate_triangle
-    #if (value1 + value2 > value3 && value2 + value3 > value1 && value3 + value1 > value2)
-          puts "ddddddddddd"
-          valid_triangle = [value1, value2, value3].collect {  |value| "false" if value <= 0 }
-            puts valid_triangle
-            if valid_triangle.include?(false)
-              begin
-                raise TriangleError
-              end
-            end
-    #end
+    real_triangle = [(a + b > c), (a + c > b), (b + c > a)]
+    [a, b, c].each { |s| real_triangle << false if s <= 0 }
+    raise TriangleError if real_triangle.include?(false)
   end
 end
 
