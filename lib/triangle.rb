@@ -20,7 +20,7 @@ class Triangle
 
   def validate_triangle
     if (value1 + value2 > value3 && value2 + value3 > value1 && value2 + value3 > value1
-          valid_triangle = [value1, value2 value3].collect do |value| "false" if value <= 0 }
+          valid_triangle = [value1, value2, value3].collect do |value| "false" if value <= 0 }
             puts valid_triangle
             if valid_triangle.iclude?(false)
               begin
