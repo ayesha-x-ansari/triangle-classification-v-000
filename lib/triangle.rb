@@ -9,7 +9,6 @@ class Triangle
 
   def kind
     validate_triangle
-    puts "here we go"
     if @value1 == @value2 &&   @value2 == @value3
        :equilateral
     elsif @value1 == @value2 ||   @value2 == @value3  ||  @value1 == @value3
@@ -21,7 +20,7 @@ class Triangle
 
   def validate_triangle
     real_triangle = [(value1 + value2 > value3), (value1 + value3 > value2), (value2 + value3 > value1)]
-    [3, value2, value3].each { |s| real_triangle << false if s <= 0 }
+    [value1, value2, value3].each { |s| real_triangle << false if s <= 0 }
     raise TriangleError if real_triangle.include?(false)
   end
 end
