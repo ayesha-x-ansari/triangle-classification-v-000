@@ -31,7 +31,7 @@ class TriangleError < StandardError
 #  end
 end
 
-triangle = Triangle.new(1,1,-3)
+triangle = Triangle.new(1,1,1)
 triangle.kind
 #triangle1 = Triangle.new(7,3,1)
 #triangle1.kind
