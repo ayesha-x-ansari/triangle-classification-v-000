@@ -22,7 +22,7 @@ class Triangle
     if (value1 + value2 > value3 && value2 + value3 > value1 && value2 + value3 > value1
           valid_triangle = [value1, value2, value3].collect {  |value| "false" if value <= 0 }
             puts valid_triangle
-            if valid_triangle.iclude?(false)
+            if valid_triangle.include?(false)
               begin
                 raise TriangleError
               rescue TriangleError => error
