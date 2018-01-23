@@ -25,8 +25,6 @@ class Triangle
             if valid_triangle.include?(false)
               begin
                 raise TriangleError
-              rescue TriangleError => error
-                  puts error.message
               end
             end
     end
